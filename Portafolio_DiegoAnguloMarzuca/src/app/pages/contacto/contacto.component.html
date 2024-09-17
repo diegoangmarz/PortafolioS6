@@ -1,0 +1,10 @@
+
+<div class="contacto-container">
+    <div class="contacto-row">
+        @for (contact of contactList; track $index) {
+            <app-contact-card [contactCard]="contact"/>
+        }
+    </div>
+</div>
+
+

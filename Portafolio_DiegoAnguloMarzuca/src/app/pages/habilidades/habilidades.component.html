@@ -1,0 +1,10 @@
+
+<div class="hability-container">
+    <div class="hability-row">
+        @for (hability of habilityList; track $index) {
+            <app-hability-card [habilityCard]="hability"/>
+        }
+    </div>
+</div>
+
+

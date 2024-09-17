@@ -1,0 +1,128 @@
+/* Reseteo de box-sizing y márgenes/padding */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos generales del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Información */
+.informacion {
+    background-color: white;
+    border: 1vh solid black; /* Borde negro */
+    padding: 20px; /* Espaciado interno */
+    margin-top: 22vh;
+    border-radius: 3vh;
+}
+
+/* Ajuste de fuente */
+.informacion p {
+    font-size: larger;
+}
+
+/* Imagen */
+.image img {
+    height: 40vh;
+    width: 40vh;
+    border-radius: 10vh;
+    border: 1vh solid black;
+    margin: 10px;
+    margin-top: 15vh;
+}
+
+/* Estilos para pantallas pequeñas (teléfonos) */
+@media (max-width: 599px) {
+    .container {
+        flex-direction: column;
+        text-align: center; /* Centrar texto en pantallas pequeñas */
+        padding: 10px; /* Reduce el padding en pantallas pequeñas */
+    }
+
+    .image img {
+        height: 30vh;
+        width: 30vh;
+        border-radius: 5vh;
+        margin-top: 10vh; /* Ajuste de margen superior */
+    }
+
+    .informacion {
+        margin-top: 20px; /* Ajuste de margen superior */
+        max-width: 90%; /* Asegura que el contenido no exceda el ancho de la pantalla */
+        padding: 15px; /* Ajuste de padding */
+    }
+
+    .informacion p {
+        font-size: medium; /* Ajuste de tamaño de fuente */
+    }
+}
+
+/* Estilos para pantallas medianas (tabletas) */
+@media (min-width: 600px) and (max-width: 1024px) {
+    .container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: left; /* Alineación de texto a la izquierda */
+    }
+
+    .image img {
+        height: 40vh;
+        width: 40vh;
+        border-radius: 10vh;
+    }
+
+    .informacion {
+        margin-left: 20px; /* Espacio entre la imagen y la información */
+        margin-top: 0; /* Remueve margen superior */
+    }
+
+    .informacion p {
+        font-size: larger; /* Ajuste de tamaño de fuente */
+    }
+}
+
+/* Estilos para pantallas grandes (escritorio) */
+@media (min-width: 1025px) {
+    .container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: left; /* Alineación de texto a la izquierda */
+    }
+
+    .image img {
+        height: 50vh;
+        width: 50vh;
+        border-radius: 10vh;
+    }
+
+    .informacion {
+        margin-left: 20px; /* Espacio entre la imagen y la información */
+        margin-top: 0; /* Remueve margen superior */
+    }
+
+    .informacion p {
+        font-size: larger; /* Ajuste de tamaño de fuente */
+    }
+}

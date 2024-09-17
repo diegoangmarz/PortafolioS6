@@ -1,0 +1,10 @@
+
+<div class="proyect-container">
+    <div class="proyect-row">
+        @for (proyect of proyectList; track $index) {
+            <app-proyect-card [proyectCard]="proyect"/>
+        }
+    </div>
+</div>
+
+

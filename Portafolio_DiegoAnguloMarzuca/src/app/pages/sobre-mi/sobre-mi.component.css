@@ -1,0 +1,82 @@
+/* Estilos generales */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center; /* Asegura que el texto esté centrado en pantallas pequeñas */
+}
+
+.informacion {
+    background-color: white;
+    border: 1vh solid black; /* Establece el borde negro */
+    padding: 20px; /* Espaciado interno para el contenido */
+    margin-top: 22vh;
+    border-radius: 3vh;
+
+}
+
+.image img {
+    max-width: 100%; /* Asegura que la imagen no sobrepase su contenedor */
+    height: auto;
+    border-radius: 10vh;
+    border: 1vh solid black;
+    margin-top: 15vh;
+    margin-left: 15vh;
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 1025px) {
+    .informacion {
+        margin: 100px;
+    }
+
+    .image img {
+        height: 50vh;
+        width: 50vh;
+        border-radius: 10vh;
+    }
+}
+
+/* Estilos para pantallas medianas */
+@media (min-width: 600px) and (max-width: 1024px) {
+    .informacion {
+        margin-left: 100px;
+        margin-top: 15vh;
+    }
+
+    .image img {
+        height: 50vh;
+        width: 50vh;
+        border-radius: 10vh;
+    }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 599px) {
+    .container {
+        flex-direction: column; /* Coloca los elementos en columna */
+        height: 100vh; /* Altura de la ventana gráfica para centrar verticalmente */
+    }
+    
+    .image img {
+        height: 35vh;
+        width: 35vh;
+        border-radius: 5vh;
+        margin: 0 auto; /* Centra horizontalmente la imagen */
+    }
+    
+    .informacion {
+        max-width: 90%; /* Ajusta según sea necesario */
+        margin-top: 20px; /* Espacio entre la imagen y el texto */
+        padding: 10px;
+    }
+
+    .informacion h1 {
+        font-size: larger;
+    }
+    
+    .informacion p {
+        font-size: medium;
+    }
+}
